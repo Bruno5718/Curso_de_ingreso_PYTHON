@@ -43,8 +43,8 @@ class App(customtkinter.CTk):
 
         else :
             mensaje = "MENOR"
-            
-        alert(message=mensaje)
+
+        alert(message = mensaje)
 
         
 
