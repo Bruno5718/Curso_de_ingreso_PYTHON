@@ -41,7 +41,24 @@ class App(customtkinter.CTk):
 
 
     def btn_sumar_on_click(self):
-        pass
+        #txt_operador_a
+        #txt_operador_b
+        #txt_resultado
+        operador_uno_txt = self.txt_operador_a.get()
+        operador_uno_numero = int(operador_uno_txt)
+
+        operador_dos_txt = self.txt_operador_b.get()
+        operador_dos_numero = int(operador_dos_txt)
+        #cuando quiera operar con valores pasarlos a número, sino me va a unir las variables como texto
+        #para pasar a número int(nombre variable) = entero
+
+        resultado = operador_uno_numero + operador_dos_numero
+        resultador_a_txt = str(resultado)
+        #para concatenar necesito que todo sea txt, no puedo unir un n con un txt
+        #para convertir a txt necesito str(nombre variable) = convierte a txt
+
+
+        alert(title="Resultado" , message="El resultado de la suma es " + resultador_a_txt)
      
         
 if __name__ == "__main__":

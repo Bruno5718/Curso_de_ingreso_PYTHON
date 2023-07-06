@@ -31,10 +31,17 @@ class App(customtkinter.CTk):
         
         self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
-
+        
 
     def btn_mostrar_on_click(self):
-        pass
+        nombre = prompt(title="ejercicio 4" ,prompt="ingrese su nombre")
+        #siempre trabajo abajo del def
+        #el delete sirve para borrar lo escrito anteriormente
+        #insert sirve para insertar la variable 
+        #con alt + flechita se puede mover una linea entera de código
+        self.txt_nombre.delete(0,10000)
+        self.txt_nombre.insert(0, nombre)
+        
         
     
 if __name__ == "__main__":

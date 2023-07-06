@@ -41,7 +41,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+
+      
+        nombre = self.txt_nombre.get()
+        edad = self.txt_edad.get()
+        #apretar tab o ent autocompleta(evita errores de typeo)
+        # alert(title="Su nombre y su edad" , message="Usted se llama " + nombre + " y su edad es " + edad + " años")
+        # mensaje = f "Usted se llama {nombre} y su edad es {edad} años"
+        # mensaje = "Usted se llama {0} y su edad es {años}".format(nombre,edad) (Practicar ésta)
+        mensaje = "Usted se llama " + nombre + " y su edad es " + edad + " años"
+        alert(title="Su nombre y su edad" , message=mensaje)
+        
 
 
         

@@ -36,7 +36,9 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         pass
-                
+
+        nombre = self.txt_nombre.get()
+        alert(title="Su nombre" , message=nombre)
     
 if __name__ == "__main__":
     app = App()
