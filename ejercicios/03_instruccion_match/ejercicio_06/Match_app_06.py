@@ -34,9 +34,34 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        hora = self.txt_hora.get()
+        hora_num = int(hora)
+        mensaje = None
+        #Si está entre las 7 y las 11: ‘Es de mañana’
+        #Si está entre las 12 y las 19: ‘Es de tarde’
+        #Si está entre las 20 y las 24 o entre las 0 y las 6: ‘Es de noche’
+        #Si no está entre 0 y las 24: ‘La hora no existe’
+        match hora_num :
+            case 7 | 8 | 9 | 10 | 11 :
+                mensaje = "Es de mañana"
+
+            case 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 :
+                mensaje = "Es de tarde"
+            
+            case 20 | 21 | 22 | 23 | 24 | 0 | 1 | 2 | 3 | 4 | 5 | 6 :
+                mensaje = "Es de noche"
+
+            case _ :  
+                    mensaje ="La hora no existe"
+
+        if mensaje != None :
+            alert(message = mensaje)
+
+
     
     
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
